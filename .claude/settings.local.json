@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(venv/bin/python3 *)"
+      "Bash(venv/bin/python3 *)",
+      "WebSearch",
+      "Bash(git init)"
     ]
   }
 }
