@@ -1,0 +1,211 @@
+/* ------------------------------------------------------------------ */
+/* Hero v2 — centered single-column layout                            */
+/* ------------------------------------------------------------------ */
+
+.hero-v2 {
+    padding: 4rem 1.5rem 5rem;
+    text-align: center;
+}
+
+.hero-v2-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+/* Badge */
+.hero-v2-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #eef7f1;
+    color: #2e7d4f;
+    border: 1px solid #b6dfc7;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1.75rem;
+}
+
+.hero-v2-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #3a9e61;
+    flex-shrink: 0;
+}
+
+/* Title */
+.hero-v2-title {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    margin-bottom: 1.25rem;
+}
+
+.hero-v2-title-green {
+    color: #3a9e61;
+}
+
+/* Subtitle */
+.hero-v2-subtitle {
+    font-size: 1.05rem;
+    color: var(--ink-muted);
+    line-height: 1.7;
+    max-width: 520px;
+    margin-bottom: 2.25rem;
+}
+
+/* Buttons */
+.hero-v2-actions {
+    display: flex;
+    gap: 0.85rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3.5rem;
+}
+
+.hero-v2-btn {
+    display: inline-block;
+    background: var(--ink);
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.8rem 1.75rem;
+    border-radius: var(--radius-md);
+    transition: opacity 0.15s;
+}
+
+.hero-v2-btn:hover {
+    opacity: 0.85;
+}
+
+/* ------------------------------------------------------------------ */
+/* Dashboard mockup                                                    */
+/* ------------------------------------------------------------------ */
+
+.hero-v2-dashboard {
+    width: 100%;
+    max-width: 720px;
+    background: #f2f0ec;
+    border-radius: 18px;
+    padding: 1.25rem 1.25rem 1.5rem;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
+}
+
+/* Browser chrome dots */
+.dash-chrome {
+    display: flex;
+    gap: 0.45rem;
+    margin-bottom: 1.1rem;
+}
+
+.dash-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dash-dot-red    { background: #e5534b; }
+.dash-dot-yellow { background: #dda63e; }
+.dash-dot-green  { background: #57b878; }
+
+/* Stat cards row */
+.dash-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.dash-stat {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: left;
+}
+
+.dash-stat-label {
+    font-size: 0.75rem;
+    color: var(--ink-faint);
+    font-weight: 500;
+}
+
+.dash-stat-value {
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.1;
+}
+
+.dash-stat-sub {
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    font-weight: 500;
+}
+
+.dash-sub-red   { color: #c0392b; }
+.dash-sub-green { color: #2e7d4f; }
+
+/* Category bars */
+.dash-bars {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.dash-bar-row {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dash-bar-label {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    text-align: right;
+}
+
+.dash-bar-track {
+    height: 10px;
+    background: #e8e5e0;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.dash-bar {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.dash-bar-yellow { background: #d4920a; }
+.dash-bar-blue   { background: #4a7fd4; }
+.dash-bar-purple { background: #7c5cbf; }
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                          */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 600px) {
+    .hero-v2 { padding: 3rem 1rem 3.5rem; }
+
+    .dash-stats { grid-template-columns: 1fr; }
+
+    .hero-v2-title { font-size: 2.4rem; }
+}
